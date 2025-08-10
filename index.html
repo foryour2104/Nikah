@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pernikahan Udin & Imas</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      color: #333;
+    }
+    header {
+      background: #d6336c;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .countdown {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+    section {
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .section-title {
+      font-size: 1.8em;
+      color: #d6336c;
+      margin-bottom: 15px;
+    }
+    .photo img {
+      width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #00000033;
+    }
+    .story, .event, .location {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .footer {
+      background: #d6336c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    iframe {
+      width: 100%;
+      max-width: 500px;
+      height: 400px;
+      border: 0;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Udin & Imas</h1>
+  <div class="countdown" id="countdown">Menuju Hari Bahagia...</div>
+</header>
+
+<section class="photo">
+  <img src="20250809_101346.jpg" alt="Udin dan Imas" />
+</section>
+
+<section class="story">
+  <h2 class="section-title">Cerita Cinta Kami</h2>
+  <p>Kisah kami dimulai dari tawa yang sederhana, hingga tumbuh menjadi cinta yang luar biasa. Kini, kami siap melangkah ke babak baru bersama.</p>
+</section>
+
+<section class="event">
+  <h2 class="section-title">Detail Acara</h2>
+  <p><strong>Tanggal:</strong> 25 Agustus 2025</p>
+  <p><strong>Lokasi:</strong> Gunung Kemang Pasir, Pasir Anying</p>
+</section>
+
+<section class="location">
+  <h2 class="section-title">Peta Lokasi</h2>
+  <p>(Contoh Google Maps bisa disesuaikan nanti)</p>
+  <iframe src="https://maps.google.com/maps?q=Pasir%20Anying&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</section>
+
+<section class="rsvp">
+  <h2 class="section-title">Konfirmasi Kehadiran</h2>
+  <p>Silakan isi formulir kehadiran melalui link berikut:</p>
+  <a href="https://forms.gle/your-google-form-link" target="_blank">RSVP via Google Form</a>
+</section>
+
+<div class="footer">
+  <p>Terima kasih atas doa & restunya ❤️</p>
+  <p>Udin & Imas | 2025</p>
+</div>
+
+<script>
+  // Countdown ke tanggal 25 Agustus 2025
+  const targetDate = new Date("2025-08-25T00:00:00").getTime();
+  const countdownEl = document.getElementById("countdown");
+  setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+    if (distance < 0) {
+      countdownEl.innerText = "Hari ini adalah hari pernikahan kami! 💍";
+      return;
+    }
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    countdownEl.innerText = `${days} hari menuju hari bahagia`;
+  }, 1000);
+</script>
+
+</body>
+</html>
